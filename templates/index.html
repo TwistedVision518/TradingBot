@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Trade | Binance Futures Testnet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Load Inter font for premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">
+                <div class="pulse-dot"></div>
+                <h1>Nexus<span>Trade</span></h1>
+            </div>
+            <p>Binance Futures Testnet UI</p>
+        </header>
+
+        <section class="glass-panel">
+            <form id="orderForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="symbol">Symbol</label>
+                        <input type="text" id="symbol" name="symbol" placeholder="BTCUSDT" required value="BTCUSDT">
+                    </div>
+                </div>
+
+                <div class="form-row split">
+                    <div class="form-group">
+                        <label for="side">Side</label>
+                        <select id="side" name="side" required>
+                            <option value="BUY">BUY / LONG</option>
+                            <option value="SELL">SELL / SHORT</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">Order Type</label>
+                        <select id="type" name="type" required>
+                            <option value="MARKET">Market</option>
+                            <option value="LIMIT">Limit</option>
+                            <option value="STOP_MARKET">Stop Market</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" step="0.001" placeholder="0.01" required>
+                </div>
+
+                <div class="form-row split" id="conditional-inputs">
+                    <div class="form-group" id="price-group" style="display: none;">
+                        <label for="price">Limit Price</label>
+                        <input type="number" id="price" name="price" step="0.5" placeholder="65000">
+                    </div>
+                    
+                    <div class="form-group" id="stop-price-group" style="display: none;">
+                        <label for="stop_price">Stop Price</label>
+                        <input type="number" id="stop_price" name="stop_price" step="0.5" placeholder="60000">
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-primary">
+                    <span class="btn-text">Execute Order</span>
+                    <span class="loader" style="display: none;"></span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Response Modal / Alert Area -->
+        <div id="responseArea" class="response-panel hidden">
+            <div class="response-header">
+                <h3 id="responseTitle">Order Status</h3>
+                <button id="closeResponse" class="close-btn">&times;</button>
+            </div>
+            <div id="responseContent" class="response-content">
+                <!-- Data injected here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

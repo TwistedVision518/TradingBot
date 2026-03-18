@@ -64,9 +64,18 @@ python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.05 --price 
 python cli.py --symbol BTCUSDT --side SELL --type STOP_MARKET --quantity 0.01 --stop-price 60000
 ```
 
+### 🌟 Bonus: Run the Graphic User Interface
+If you prefer not to use the terminal, you can launch the beautiful Web UI!
+```bash
+python app.py
+```
+Then, simply open your web browser and go to `http://127.0.0.1:5000/`.
+
 ---
 
 ## 📂 Project Structure Explained
+- `app.py`: The web interface framework serving the UI.
+- `templates/` and `static/`: The frontend HTML/CSS/JS for the glassmorphism desktop app.
 - `cli.py`: The main program you interact with over the terminal.
 - `bot/client.py`: The communication layer. It talks directly to Binance and handles the complicated HMAC SHA256 security signatures automatically.
 - `bot/validators.py`: The bodyguard. It checks your typing to make sure you didn't accidentally try to buy "-5" Bitcoin.
