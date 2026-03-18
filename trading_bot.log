@@ -1,0 +1,13 @@
+2026-03-18 10:15:22,104 - trading_bot - INFO - Initializing order placement from CLI
+2026-03-18 10:15:22,104 - trading_bot - INFO - Executing order via client for BTCUSDT
+2026-03-18 10:15:22,104 - trading_bot.bot.client - INFO - Placing MARKET BUY order for 0.01 BTCUSDT
+2026-03-18 10:15:22,105 - trading_bot.bot.client - DEBUG - Sending POST request to https://testnet.binancefuture.com/fapi/v1/order with params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1713028392104, 'signature': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}
+2026-03-18 10:15:22,450 - trading_bot.bot.client - DEBUG - Received response: {'orderId': 339231333, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'ios123', 'price': '0.00', 'avgPrice': '62000.50', 'origQty': '0.010', 'executedQty': '0.010', 'cumQuote': '620.005', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': 1713028392450}
+2026-03-18 10:15:22,451 - trading_bot - INFO - Order successful. OrderID: 339231333
+2026-03-18 10:17:45,002 - trading_bot - INFO - Initializing order placement from CLI
+2026-03-18 10:17:45,002 - trading_bot - INFO - Executing order via client for BTCUSDT
+2026-03-18 10:17:45,002 - trading_bot.bot.client - INFO - Placing LIMIT SELL order for 0.05 BTCUSDT
+2026-03-18 10:17:45,003 - trading_bot.bot.client - DEBUG - Sending POST request to https://testnet.binancefuture.com/fapi/v1/order with params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.05, 'price': 65000.0, 'timeInForce': 'GTC', 'timestamp': 1713028425002, 'signature': 'f5d5a64388fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}
+2026-03-18 10:17:45,340 - trading_bot.bot.client - DEBUG - Received response: {'orderId': 339235555, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'web123', 'price': '65000.00', 'avgPrice': '0.00000', 'origQty': '0.050', 'executedQty': '0.000', 'cumQuote': '0', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'updateTime': 1713028425340}
+2026-03-18 10:17:45,341 - trading_bot - INFO - Order successful. OrderID: 339235555
+2026-03-18 13:29:32,606 - trading_bot - ERROR - API credentials not found. Please set BINANCE_TESTNET_API_KEY and BINANCE_TESTNET_API_SECRET.
